@@ -3,7 +3,7 @@ require_relative '../requirements_handler'
 class ArrayBuilder
   attr_reader :range_to_build
   def initialize(args={})
-    @range_to_build = args[:numbers]
+    @range_to_build = args[:range]
   end
 
   def build_all_fields_array

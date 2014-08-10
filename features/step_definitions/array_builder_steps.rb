@@ -2,11 +2,7 @@ Given(/^a range of numbers$/) do
   @fields = 1..10
 end
 
-Given(/^an array of numbers$/) do
-  @fields = [1,10,100]
-end
-
-When(/^the numbers are converted into the "all_fields" array$/) do
+When(/^the range is converted into the "all_fields" array$/) do
   build_it = ArrayBuilder.new(numbers: @fields)
   @all_fields = build_it.build_all_fields_array
 end
