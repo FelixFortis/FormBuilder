@@ -1,7 +1,13 @@
+$:.unshift(File.dirname(__FILE__) + '/../../lib')
 require 'rspec/core/rake_task'
 require 'cucumber/rake/task'
 
+desc 'Run RSpec'
 RSpec::Core::RakeTask.new
-Cucumber::Rake::Task.new
 
-task :default => [:spec, :cucumber]
+desc 'Run Cucumber'
+Cucumber::Rake::Task.new do |t|
+  t.cucumber_opts = %w{--format pretty}
+end
+
+task :default => [:cucumber, :spec]
