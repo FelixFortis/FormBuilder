@@ -6,5 +6,5 @@ Feature: building arrays from generated fields
 
   Scenario: create the main array
     Given a range of numbers
-    When the range is converted into the "all_fields" array
+    When the numbers are converted into the "all_fields" array
     Then the "all_fields" array should be returned
