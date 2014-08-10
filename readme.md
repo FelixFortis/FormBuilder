@@ -10,5 +10,6 @@ Basic tests for functionality will also be included.
 
 ## Features
 
-- Building the XML which can then be fed into an external app for converting into a basic form
-- 
+* Creating arrays of field numbers and display order numbers based on a provided range
+* Building the XML which can then be fed into an external app for converting into a basic form
+* Building styled table rows based on the converted XML 

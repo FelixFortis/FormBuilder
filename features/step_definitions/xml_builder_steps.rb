@@ -1,13 +1,13 @@
-Given(/^an empty range of numbers$/) do
-  required_fields = nil
+Given(/^an empty array$/) do
+  required_fields = []
 end
 
-When(/^I convert the range$/) do
-  build_it = XMLBuilder.new(range: required_fields) # type: text_radio_text other_field: false
+When(/^I convert the array into XML$/) do
+  build_it = XMLBuilder.new(range: required_fields) # type: text_radio_text other_field: false, section_breaks: [12, 55, 123]
   generated_xml = build_it.build_xml
 end
 
-Then(/^I should be given the XML for an empty form$/) do
+Then(/^it should return the XML for an empty form$/) do
   generated_xml == %{<SmartFormConfig>
   <Sections>
     <Section>
