@@ -3,7 +3,7 @@ Given(/^a range of numbers$/) do
 end
 
 When(/^the range is converted into the "all_fields" array$/) do
-  build_it = ArrayBuilder.new(numbers: @fields)
+  build_it = ArrayBuilder.new(range_to_build: @fields)
   @all_fields = build_it.build_all_fields_array
 end
 
