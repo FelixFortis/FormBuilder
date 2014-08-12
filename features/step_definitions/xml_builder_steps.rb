@@ -3,7 +3,7 @@ Given(/^an empty array$/) do
 end
 
 When(/^I convert the array into XML$/) do
-  build_it = XMLBuilder.new(range: required_fields) # type: text_radio_text other_field: false, section_breaks: [12, 55, 123]
+  build_it = XMLBuilder.new(array: required_fields) # type: text_radio_text other_field: false, section_breaks: [12, 55, 123]
   generated_xml = build_it.build_xml
 end
 

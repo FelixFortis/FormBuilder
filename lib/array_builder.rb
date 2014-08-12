@@ -1,7 +1,7 @@
 require_relative '../requirements_handler'
 
 class ArrayBuilder
-	attr_reader :range_to_build, :first_percent_field, :section_fields
+  attr_reader :range_to_build, :first_percent_field, :section_fields
   def initialize(args={})
     @range_to_build = args[:range_to_build]
 	@first_percent_field = args[:first_percent_field]
@@ -38,6 +38,6 @@ class ArrayBuilder
   end
     
   def get_section_fields_array
-    
+	format_array(section_fields)
   end
 end
