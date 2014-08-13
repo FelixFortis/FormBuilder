@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ArrayBuilder do
   describe 'range to array converter' do
-	  it "should accept no arguments" do
+	it "should accept no arguments" do
       range_handler = ArrayBuilder.new
 
       expect(range_handler.range_to_build).to eq(nil)
@@ -14,10 +14,17 @@ describe ArrayBuilder do
 
       expect(range_handler.range_to_build).to eq(1..10)
     end
+	  
+    it "should accept an array" do
+      range_to_build = [1,2,3,4,5,6,7,8,9,10]
+      range_handler = ArrayBuilder.new(range_to_build: range_to_build)
+
+      expect(range_handler.range_to_build).to eq([1,2,3,4,5,6,7,8,9,10])
+    end
 
     it "should convert an empty range into an empty array" do
       range_handler = ArrayBuilder.new
-      converted = range_handler.build_array
+      converted = range_handler.array_to_build
 
       expect(converted).to eq([])
     end

@@ -3,12 +3,12 @@ require_relative '../requirements_handler'
 class ArrayBuilder
   attr_reader :range_to_build, :first_percent_field, :section_fields
   def initialize(args={})
-    @range_to_build = args[:range_to_build]
+	@range_to_build = args[:range_to_build]
 	@first_percent_field = args[:first_percent_field]
 	@section_fields = args[:section_fields]
   end
 
-  def build_array
+  def array_to_build
     @array_to_build = @range_to_build.to_a
   end
 
@@ -21,12 +21,12 @@ class ArrayBuilder
   end
     
   def get_all_fields_array
-	format_array(build_array)
+	format_array(array_to_build)
   end
     
   def get_percent_fields_array
 	count = @first_percent_field
-	stop = build_array.size
+	stop = array_to_build.size
 	basic_percent_array = []
 	
 	while count <= stop do
