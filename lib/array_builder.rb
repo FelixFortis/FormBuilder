@@ -9,12 +9,12 @@ class ArrayBuilder
   end
 
   def array_to_build
-    @array_to_build = @range_to_build.to_a
+    range_to_build.to_a
   end
 
   def format_array(array)
     unless array.nil?
-      @final_array = array.collect do |field|
+      array.collect do |field|
         field.to_s.rjust(3,"0").prepend("field_")
       end
     end
@@ -25,7 +25,7 @@ class ArrayBuilder
   end
     
   def get_percent_fields_array
-	count = @first_percent_field
+	count = first_percent_field
 	stop = array_to_build.size
 	basic_percent_array = []
 	

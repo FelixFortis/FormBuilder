@@ -4,7 +4,7 @@ Feature: building arrays from generated fields
   In order to create arrays for my form build
   I want to convert a range of numbers into different arrays
 
-  Scenario: create the main array
+  Scenario: create a formatted array
     Given a range of numbers
-    When the range is converted into the "all_fields" array
-    Then the "all_fields" array should be returned
+    When the range is converted and formatted
+    Then a formatted array should be returned
