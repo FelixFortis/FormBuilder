@@ -21,7 +21,7 @@ describe XMLBuilder do
 			expect(array_converter.build_xml).to eq(%{<SmartFormConfig><Sections><Section><Title count="0">field_0</Title><FriendName>My Form</FriendName><Order>0</Order><HeaderHTML>My Form</HeaderHTML><Label>Welcome to my form...</Label></Section></Sections><ContactFields></ContactFields><Segmentation></Segmentation><BespokeFields></BespokeFields><ContactFieldFlags></ContactFieldFlags></SmartFormConfig>})
 		end
 
-		it "should return the XML for a for with section fields when passed an array of sections" do
+		it "should return the XML for a form with section fields when passed an array of sections" do
 			array_to_convert = ["field_001","field_010","field_100"]
 			array_converter = XMLBuilder.new(section_array: array_to_convert)
 			

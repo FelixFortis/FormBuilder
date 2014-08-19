@@ -2,7 +2,7 @@ Given(/^a range of numbers$/) do
 	@fields = 1..10
 end
 
-When(/^the range is converted and formatted" array$/) do
+When(/^the range is converted and formatted$/) do
 	build_it = ArrayBuilder.new(range_to_build: @fields)
 	@all_fields = build_it.get_all_fields_array
 end
