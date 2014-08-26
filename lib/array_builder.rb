@@ -1,4 +1,4 @@
-require_relative '../requirements_handler'
+require_relative 'requirements_handler'
 
 class ArrayBuilder
 	attr_reader :range_to_build, :first_percent_field, :section_fields
@@ -18,6 +18,10 @@ class ArrayBuilder
 				field.to_s.rjust(3,"0").prepend("field_")
 			end
 		end
+	end
+
+	def format_field(field)
+		field.to_s.rjust(3,"0").prepend("field_")
 	end
 
 	def get_all_fields_array
